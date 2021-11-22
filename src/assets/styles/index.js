@@ -62,6 +62,14 @@ export const BLOG_CONTAINER = {
     backgroundColor: '#003f5c',
 }
 
+export const TITLE_HEADER = {
+    color: TEXT_COLOR,
+    fontWeight: 'bold',
+    fontSize: 30,
+    marginTop: 15,
+    marginBottom: 15
+}
+
 export const CARD_STYLE = {
     width: Dimensions.get("window").width - 40,
     height: 350,

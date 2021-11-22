@@ -5,6 +5,7 @@ import {
     CARD_STYLE,
     CARD_TITLE,
     BLOG_CONTAINER,
+    TEXT_COLOR
 } from '../../assets/styles';
 
 
@@ -31,7 +32,8 @@ function Home({navigation}){
                      <Text style={CARD_TITLE}>
                          {data.title}
                     </Text>
-                        <Text style={{padding: 15}}>{data.excerpt}
+                    <Text style={{padding: 15}}>
+                            {data.excerpt}
                     </Text>
                 </View>
             </TouchableOpacity>
@@ -49,13 +51,15 @@ function Home({navigation}){
                         justifyContent: "space-between"
                     }}
                 >
+                <Text style={{
+                    color: TEXT_COLOR,
+                    fontWeight: 'bold',
+                    fontSize: 30,
+                    marginTop: 15,
+                    marginBottom: 15
+                }}>Posts</Text>
                 {
                     blogData.map((list) => _renderList(list))
-                    // DATA.map(list => (
-                    //     <View style={styles.cardStyle}>
-                    //         <Text>{list}</Text>
-                    //     </View>
-                    // ))
                 }
             </ScrollView>
         </SafeAreaView>
